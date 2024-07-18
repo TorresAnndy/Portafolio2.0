@@ -7,30 +7,39 @@ const sectionMarginBottom = 30;
 
 export const globalStyles = StyleSheet.create({
   pagina: {
-    backgroundColor: '#fff', 
+    backgroundColor: '#fff',
     flex: 1,
     paddingTop: Platform.OS === 'android' ? 30 : 0,
-    position: 'relative',
+  },
+  gradientBackground: {
+    flex: 1,
+    // Para asegurarte de que el degradado cubra toda la pantalla
   },
   barra: {
     flexGrow: 1,
     padding: 20,
   },
-  header: {
-    height: screenHeight - sectionPadding - sectionMarginBottom - (Platform.OS === 'android' ? 30 : 0),
-    marginBottom: sectionMarginBottom,
-    padding: sectionPadding,
-    borderWidth: 2,
-    borderColor: '#007bff',
-    borderRadius: 10,
-    justifyContent: 'center',
-  },
+  
   imagencircular: {
-    width: 150,
-    height: 150,
-    borderRadius: 75,
-    marginBottom: 10,
+    width: 300,
+    height: 300,
+    borderRadius: 150, // Ajusta el radio para que sea la mitad del ancho/alto
+    position: 'absolute', // Para posicionamiento absoluto dentro del contenedor
+    top: '50%', // Centra verticalmente
+    left: '50%', // Centra horizontalmente
+    transform: [
+      { translateX: -700 }, // Mueve la imagen a la izquierda para centrarla
+      { translateY: -300 }, // Mueve la imagen arriba para centrarla
+    ],
   },
+  Hola: {
+    textAlign: 'center',
+    fontSize: 50,
+    fontWeight: 'bold',
+    marginBottom: 5,
+    color: '#000',
+  },
+
   titulo: {
     textAlign: 'center',
     fontSize: 20,
@@ -38,11 +47,21 @@ export const globalStyles = StyleSheet.create({
     marginBottom: 5,
     color: '#000', 
   },
+
+  Junior: {
+    fontSize: 30,
+    color: '#555',
+    marginBottom: 21,
+    justifyContent: 'center',
+    textAlign: 'center',
+  },
+
   subtitulos: {
     fontSize: 20,
     color: '#555',
     marginBottom: 21,
   },
+
   section: {
     height: screenHeight - sectionPadding - sectionMarginBottom - (Platform.OS === 'android' ? 30 : 0),
     marginBottom: sectionMarginBottom,
@@ -50,6 +69,7 @@ export const globalStyles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#007bff',
     borderRadius: 10,
+    textAlign: 'center',
     justifyContent: 'center',
   },
   sectionContent: {
@@ -138,10 +158,8 @@ export const globalStyles = StyleSheet.create({
     position: 'absolute',
     top: 55, // Ajusta la posición según sea necesario
     right: 30,
-    backgroundColor: '#fff', // Asegúrate de que el fondo sea blanco o el color deseado
     padding: 10,
     borderRadius: 5,
-    borderWidth: 0,
     borderColor: '', // Solo el borde que quieres
     zIndex: 10,
   },

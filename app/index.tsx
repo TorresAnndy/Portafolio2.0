@@ -8,6 +8,8 @@ import Proyectos from '../ComponentesApp/Proyectos';
 import Contacto from '../ComponentesApp/Contacto';
 import Menu from '../ComponentesApp/menu';
 import { Navegar } from '../ComponentesApp/Deslizar';
+import LinearGradient from 'react-native-linear-gradient';
+
 
 type Section = 'Inicio' | 'SobreMi' | 'Aspiraciones' | 'Proyectos' | 'Aprendizaje' | 'Contacto';
 
@@ -50,6 +52,10 @@ export default function App() {
 
   return (
     <View style={globalStyles.pagina}>
+      <LinearGradient
+        colors={['#6a0dad', '#9b4f9d']} // Colores del degradado
+        style={globalStyles.gradientBackground}
+      ></LinearGradient>
       <View style={globalStyles.menuContainer}>
         <TouchableOpacity onPress={toggleMenu}>
           <Image
@@ -70,13 +76,13 @@ export default function App() {
         
         <Animated.View style={{ opacity: fadeAnim }}>
           {/* Header */}
-          <View style={globalStyles.header}>
+          <View style={globalStyles.section}>
             <Image
               source={require('../assets/images/perfil.png')}
               style={globalStyles.imagencircular}
             />
-            <Text style={globalStyles.titulo}>Hola, mi nombre es Andy</Text>
-            <Text style={globalStyles.subtitulos}>Junior Developer</Text>
+            <Text style={globalStyles.Hola}>Hola, mi Nombre es Andy</Text>
+            <Text style={globalStyles.Junior}>Junior Developer</Text>
           </View>
           
           {/* Sobre mí */}
