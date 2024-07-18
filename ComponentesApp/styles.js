@@ -1,3 +1,4 @@
+// styles.js
 import { StyleSheet, Platform, Dimensions } from 'react-native';
 
 const { height: screenHeight } = Dimensions.get('window');
@@ -9,14 +10,20 @@ export const globalStyles = StyleSheet.create({
     backgroundColor: '#fff', 
     flex: 1,
     paddingTop: Platform.OS === 'android' ? 30 : 0,
+    position: 'relative',
   },
   barra: {
     flexGrow: 1,
     padding: 20,
   },
   header: {
-    alignItems: 'center',
-    marginBottom: 20,
+    height: screenHeight - sectionPadding - sectionMarginBottom - (Platform.OS === 'android' ? 30 : 0),
+    marginBottom: sectionMarginBottom,
+    padding: sectionPadding,
+    borderWidth: 2,
+    borderColor: '#007bff',
+    borderRadius: 10,
+    justifyContent: 'center',
   },
   imagencircular: {
     width: 150,
@@ -43,7 +50,7 @@ export const globalStyles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#007bff',
     borderRadius: 10,
-    justifyContent: 'center', // Centra el contenido verticalmente
+    justifyContent: 'center',
   },
   sectionContent: {
     alignItems: 'center',
@@ -120,51 +127,50 @@ export const globalStyles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
-  menu: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    paddingVertical: 3,
-    backgroundColor: '#5D87FF',
-    paddingHorizontal: 20,
-  },
-  menuItemContainer: {
-    top: 5,
-    backgroundColor: '#fff',
-    marginBottom: 30,
-    padding: 10,
-    borderWidth: 2,
-    borderColor: '#011F75',
-    borderRadius: 10,
-  },
-  menuItem: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#333',
-  },
   
-  menuButton: {
-    fontSize: 18,
-    color: '#333',
-    padding: 10,
-    backgroundColor: '#ddd',
-    textAlign: 'center',
-    borderRadius: 5,
-    marginBottom: 10
+  menuContainer: {
+    position: 'absolute',
+    top: 0,
+    right: 20,
+    zIndex: 10,
   },
-
   menu: {
-    backgroundColor: '#fff',
-    padding: 10,
+    position: 'absolute',
+    top: 55, // Ajusta la posición según sea necesario
+    right: 30,
+    backgroundColor: '#fff', // Asegúrate de que el fondo sea blanco o el color deseado
+    padding: 100,
     borderRadius: 5,
-    // Agrega más estilos según sea necesario
+    borderWidth: 1,
+    borderColor: 'blue', // Solo el borde que quieres
+    zIndex: 10,
   },
-
-  menuItemContainer: {
-    marginVertical: 5,
+  buttonText: {
+    color: '#fff', // Color del texto
+    fontSize: 16, // Tamaño del texto
+    fontWeight: 'bold', // Negrita
   },
-
-  menuItem: {
-    fontSize: 16,
-    color: '#333',
+  menuButton: {
+    width: 40, // Ajusta el tamaño según sea necesario
+    height: 40,
+    borderRadius: 20, // Si no quieres un círculo, ajusta esto a 0
+    backgroundColor: '#ddd',
+    margin: 10,
+  },
+  button: {
+    margin: 10,
+    backgroundColor: '#007bff', // Color de fondo del botón
+    paddingVertical: 15, // Espaciado vertical
+    paddingHorizontal: 20, // Espaciado horizontal
+    borderRadius: 10, // Bordes redondeados
+    borderWidth: 1, // Ancho del borde
+    borderColor: '#0056b3', // Color del borde
+    alignItems: 'center', // Centra el texto horizontalmente
+    justifyContent: 'center', // Centra el texto verticalmente
+    shadowColor: '#000', // Color de la sombra
+    shadowOffset: { width: 9, height: 10 }, // Desplazamiento de la sombra
+    shadowOpacity: 8, // Opacidad de la sombra
+    shadowRadius: 6, // Difuminado de la sombra
+    elevation: 5, // Elevación para Android
   },
 });

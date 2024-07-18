@@ -3,7 +3,7 @@ export const Navegar = (scrollViewRef, section) => {
   // Lógica para desplazar a la sección correspondiente
   switch (section) {
     case 'Inicio':
-      scrollViewRef.current.scrollTo({y: 0, animated: true});
+      scrollViewRef.current.scrollTo({y: 24, animated: true});
       break;
     case 'SobreMi':
       scrollViewRef.current.scrollTo({ y: 300, animated: true });
@@ -18,7 +18,7 @@ export const Navegar = (scrollViewRef, section) => {
       scrollViewRef.current.scrollTo({ y: 3050, animated: true });
       break;
     case 'Contacto':
-      scrollViewRef.current.scrollTo({ y: 3750, animated: true });
+      scrollViewRef.current.scrollTo({ y: 4150, animated: true });
       break;
     default:
       break;

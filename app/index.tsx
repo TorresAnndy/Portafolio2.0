@@ -35,13 +35,20 @@ export default function App() {
 
   return (
     <View style={globalStyles.pagina}>
-      <Animated.View style={{ opacity: fadeAnim }}>
+      <View style={globalStyles.menuContainer}>
         <TouchableOpacity onPress={() => setMenuVisible(!menuVisible)}>
-          <Text style={globalStyles.menuButton}>Menu</Text> {/* Botón de menú */}
+          <Image
+            style={globalStyles.menuButton}
+            source={require('../assets/images/casa.png')} // Botón de menú
+          />
         </TouchableOpacity>
-        {menuVisible && <Menu handleNavigation={handleNavigation} />}
-      </Animated.View>
-      
+        {menuVisible && (
+          <View style={globalStyles.menu}>
+            <Menu handleNavigation={handleNavigation} />
+          </View>
+        )}
+      </View>
+
       <ScrollView
         ref={scrollViewRef}
         contentContainerStyle={globalStyles.barra}

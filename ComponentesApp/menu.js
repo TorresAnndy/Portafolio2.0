@@ -5,24 +5,24 @@ import { globalStyles } from './styles';
 
 const Menu = ({ handleNavigation }) => {
   return (
-    <View style={globalStyles.menu}>
-      <TouchableOpacity style={globalStyles.menuItemContainer} onPress={() => handleNavigation('Inicio')}>
-        <Text style={globalStyles.menuItem}>Inicio</Text>
+    <View>
+      <TouchableOpacity style={globalStyles.button} onPress={() => handleNavigation('Inicio')}>
+        <Text style={globalStyles.buttonText}>Inicio</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={globalStyles.menuItemContainer} onPress={() => handleNavigation('SobreMi')}>
-        <Text style={globalStyles.menuItem}>Sobre mí</Text>
+      <TouchableOpacity style={globalStyles.button} onPress={() => handleNavigation('SobreMi')}>
+        <Text style={globalStyles.buttonText}>Sobre mí</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={globalStyles.menuItemContainer} onPress={() => handleNavigation('Aspiraciones')}>
-        <Text style={globalStyles.menuItem}>Áreas de Aspiraciones</Text>
+      <TouchableOpacity style={globalStyles.button} onPress={() => handleNavigation('Aspiraciones')}>
+        <Text style={globalStyles.buttonText}>Áreas de Aspiraciones</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={globalStyles.menuItemContainer} onPress={() => handleNavigation('Proyectos')}>
-        <Text style={globalStyles.menuItem}>Proyectos</Text>
+      <TouchableOpacity style={globalStyles.button} onPress={() => handleNavigation('Proyectos')}>
+        <Text style={globalStyles.buttonText}>Proyectos</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={globalStyles.menuItemContainer} onPress={() => handleNavigation('Aprendizaje')}>
-        <Text style={globalStyles.menuItem}>Aprendizaje</Text>
+      <TouchableOpacity style={globalStyles.button} onPress={() => handleNavigation('Aprendizaje')}>
+        <Text style={globalStyles.buttonText}>Aprendizaje</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={globalStyles.menuItemContainer} onPress={() => handleNavigation('Contacto')}>
-        <Text style={globalStyles.menuItem}>Contacto</Text>
+      <TouchableOpacity style={globalStyles.button} onPress={() => handleNavigation('Contacto')}>
+        <Text style={globalStyles.buttonText}>Contacto</Text>
       </TouchableOpacity>
     </View>
   );
