@@ -6,7 +6,7 @@ import * as link from './link'; // Asegúrate de importar las funciones necesari
 const Proyectos = () => {
   return (
     <View>
-      <Text style={globalStyles.titulo}>Proyecto</Text>
+      <Text style={globalStyles.titulo}>Proyectos</Text>
 
       <View style={globalStyles.section}>
         <Text style={globalStyles.titulo}>CEOYDESK</Text>

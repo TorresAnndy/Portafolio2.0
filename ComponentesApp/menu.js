@@ -1,4 +1,4 @@
-// Menu.js
+// ComponentesApp/menu.js
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { globalStyles } from './styles';
@@ -6,6 +6,9 @@ import { globalStyles } from './styles';
 const Menu = ({ handleNavigation }) => {
   return (
     <View style={globalStyles.menu}>
+      <TouchableOpacity style={globalStyles.menuItemContainer} onPress={() => handleNavigation('Inicio')}>
+        <Text style={globalStyles.menuItem}>Inicio</Text>
+      </TouchableOpacity>
       <TouchableOpacity style={globalStyles.menuItemContainer} onPress={() => handleNavigation('SobreMi')}>
         <Text style={globalStyles.menuItem}>Sobre mí</Text>
       </TouchableOpacity>

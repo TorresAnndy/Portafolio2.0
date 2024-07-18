@@ -1,15 +1,18 @@
 // App.js
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { Text, View, Image, Animated, ScrollView } from 'react-native';
+import { Text, View, Image, Animated, ScrollView, TouchableOpacity } from 'react-native';
 import { globalStyles } from '../ComponentesApp/styles';
 import Aprendizaje from '../ComponentesApp/aprendizaje';
 import Proyectos from '../ComponentesApp/Proyectos';
 import Contacto from '../ComponentesApp/Contacto';
 import Menu from '../ComponentesApp/menu';
-import { Navegar } from '../ComponentesApp/Deslizar'; // Importa la función Navegar desde el archivo
+import { Navegar } from '../ComponentesApp/Deslizar';
+
+type Section = 'Inicio' | 'SobreMi' | 'Aspiraciones' | 'Proyectos' | 'Aprendizaje' | 'Contacto';
 
 export default function App() {
+  const [menuVisible, setMenuVisible] = useState(false);
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const scrollViewRef = useRef(null);
 
@@ -25,14 +28,18 @@ export default function App() {
     fadeIn();
   }, []);
 
-  const handleNavigation = (section) => {
-    Navegar(scrollViewRef, section); // Llama a la función Navegar con scrollViewRef y section
+  const handleNavigation = (section: Section) => {
+    Navegar(scrollViewRef, section);
+    setMenuVisible(false); // Oculta el menú después de la navegación
   };
 
   return (
     <View style={globalStyles.pagina}>
       <Animated.View style={{ opacity: fadeAnim }}>
-        <Menu handleNavigation={handleNavigation} />
+        <TouchableOpacity onPress={() => setMenuVisible(!menuVisible)}>
+          <Text style={globalStyles.menuButton}>Menu</Text> {/* Botón de menú */}
+        </TouchableOpacity>
+        {menuVisible && <Menu handleNavigation={handleNavigation} />}
       </Animated.View>
       
       <ScrollView

@@ -141,4 +141,30 @@ export const globalStyles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#333',
   },
+  
+  menuButton: {
+    fontSize: 18,
+    color: '#333',
+    padding: 10,
+    backgroundColor: '#ddd',
+    textAlign: 'center',
+    borderRadius: 5,
+    marginBottom: 10
+  },
+
+  menu: {
+    backgroundColor: '#fff',
+    padding: 10,
+    borderRadius: 5,
+    // Agrega más estilos según sea necesario
+  },
+
+  menuItemContainer: {
+    marginVertical: 5,
+  },
+
+  menuItem: {
+    fontSize: 16,
+    color: '#333',
+  },
 });
