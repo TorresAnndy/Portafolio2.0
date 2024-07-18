@@ -139,10 +139,10 @@ export const globalStyles = StyleSheet.create({
     top: 55, // Ajusta la posición según sea necesario
     right: 30,
     backgroundColor: '#fff', // Asegúrate de que el fondo sea blanco o el color deseado
-    padding: 100,
+    padding: 10,
     borderRadius: 5,
-    borderWidth: 1,
-    borderColor: 'blue', // Solo el borde que quieres
+    borderWidth: 0,
+    borderColor: '', // Solo el borde que quieres
     zIndex: 10,
   },
   buttonText: {

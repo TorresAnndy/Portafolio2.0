@@ -13,9 +13,11 @@ type Section = 'Inicio' | 'SobreMi' | 'Aspiraciones' | 'Proyectos' | 'Aprendizaj
 
 export default function App() {
   const [menuVisible, setMenuVisible] = useState(false);
-  const fadeAnim = useRef(new Animated.Value(0)).current;
+  const fadeAnim = useRef(new Animated.Value(0)).current; // Para el efecto de desvanecimiento del contenido principal
+  const menuAnim = useRef(new Animated.Value(0)).current; // Para el efecto de desvanecimiento del menú
   const scrollViewRef = useRef(null);
 
+  // Efecto de desvanecimiento para el contenido principal
   const fadeIn = () => {
     Animated.timing(fadeAnim, {
       toValue: 1,
@@ -28,6 +30,19 @@ export default function App() {
     fadeIn();
   }, []);
 
+  // Función para mostrar/ocultar el menú con efecto de desvanecimiento
+  const toggleMenu = () => {
+    const toValue = menuVisible ? 0 : 1;
+    
+    Animated.timing(menuAnim, {
+      toValue,
+      duration: 300,
+      useNativeDriver: true,
+    }).start();
+
+    setMenuVisible(!menuVisible);
+  };
+
   const handleNavigation = (section: Section) => {
     Navegar(scrollViewRef, section);
     setMenuVisible(false); // Oculta el menú después de la navegación
@@ -36,17 +51,15 @@ export default function App() {
   return (
     <View style={globalStyles.pagina}>
       <View style={globalStyles.menuContainer}>
-        <TouchableOpacity onPress={() => setMenuVisible(!menuVisible)}>
+        <TouchableOpacity onPress={toggleMenu}>
           <Image
             style={globalStyles.menuButton}
             source={require('../assets/images/casa.png')} // Botón de menú
           />
         </TouchableOpacity>
-        {menuVisible && (
-          <View style={globalStyles.menu}>
-            <Menu handleNavigation={handleNavigation} />
-          </View>
-        )}
+        <Animated.View style={[globalStyles.menu, { opacity: menuAnim }]}>
+          {menuVisible && <Menu handleNavigation={handleNavigation} />}
+        </Animated.View>
       </View>
 
       <ScrollView
