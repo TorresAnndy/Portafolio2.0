@@ -7,7 +7,6 @@ const Proyectos = () => {
   return (
     <View>
       <Text style={globalStyles.titulo}>Proyectos</Text>
-
       <View style={globalStyles.section}>
         <Text style={globalStyles.titulo}>CEOYDESK</Text>
         <View style={globalStyles.project}>

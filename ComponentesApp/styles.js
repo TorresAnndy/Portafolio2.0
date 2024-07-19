@@ -13,8 +13,15 @@ export const globalStyles = StyleSheet.create({
     marginBottom: 30,
     paddingHorizontal: 45, // Ajustado para padding horizontal
     paddingVertical: 20, // Ajusta padding vertical si es necesario
-    borderWidth: 1,
-    borderColor: "#007bff",
+    alignItems: "center",
+    justifyContent: "center",
+    height: screenHeight, // Para que la sección ocupe toda la altura de la pantalla
+  },
+
+  sectioncontacto: {
+    marginBottom: -20,
+    paddingHorizontal: 45, // Ajustado para padding horizontal
+    paddingVertical: 50, // Ajusta padding vertical si es necesario
     alignItems: "center",
     justifyContent: "center",
     height: screenHeight, // Para que la sección ocupe toda la altura de la pantalla
@@ -47,7 +54,7 @@ export const globalStyles = StyleSheet.create({
     textAlign: "center",
     fontSize: 20,
     fontWeight: "bold",
-    marginBottom: 5,
+    marginBottom: 50,
     color: "#000",
   },
   Junior: {
