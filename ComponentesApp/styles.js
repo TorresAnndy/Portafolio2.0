@@ -1,7 +1,6 @@
-// styles.js
 import { StyleSheet, Platform, Dimensions } from "react-native";
 
-const { height: screenHeight } = Dimensions.get("window");
+const { height: screenHeight, width: screenWidth } = Dimensions.get("window");
 const sectionPadding = 20;
 const sectionMarginBottom = 30;
 
@@ -15,18 +14,10 @@ export const globalStyles = StyleSheet.create({
     flexGrow: 1,
     padding: 20,
   },
-  imagencircular: {
-    width: 300,
-    height: 300,
-    borderRadius: 150, // Ajusta el radio para que sea la mitad del ancho/alto
-    position: "absolute", // Para posicionamiento absoluto dentro del contenedor
-    top: "50%", // Centra verticalmente
-    left: "50%", // Centra horizontalmente
-    transform: [
-      { translateX: -700 }, // Mueve la imagen a la izquierda para centrarla
-      { translateY: -300 }, // Mueve la imagen arriba para centrarla
-    ],
+  imagencircular:{
+    borderRadius: 100,
   },
+
   Hola: {
     textAlign: "center",
     fontSize: 50,
@@ -34,7 +25,7 @@ export const globalStyles = StyleSheet.create({
     marginBottom: 5,
     color: "#000",
   },
-
+  
   titulo: {
     textAlign: "center",
     fontSize: 20,
@@ -42,7 +33,6 @@ export const globalStyles = StyleSheet.create({
     marginBottom: 5,
     color: "#000",
   },
-
   Junior: {
     fontSize: 30,
     color: "#555",
@@ -50,19 +40,12 @@ export const globalStyles = StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
   },
-
   subtitulos: {
     fontSize: 20,
     color: "#555",
     marginBottom: 21,
   },
-
   section: {
-    height:
-      screenHeight -
-      sectionPadding -
-      sectionMarginBottom -
-      (Platform.OS === "android" ? 30 : 0),
     marginBottom: sectionMarginBottom,
     padding: sectionPadding,
     borderWidth: 2,
@@ -146,8 +129,8 @@ export const globalStyles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
   },
-
   menuContainer: {
+    height: screenHeight - sectionPadding - sectionMarginBottom - (Platform.OS === "android" ? 30 : 0),
     position: "absolute",
     top: 0,
     right: 20,
@@ -159,8 +142,8 @@ export const globalStyles = StyleSheet.create({
     right: 30,
     padding: 10,
     borderRadius: 5,
-    borderColor: "", // Solo el borde que quieres
     zIndex: 10,
+    width: screenWidth * 0.6, // Ajusta el ancho según sea necesario
   },
   buttonText: {
     color: "#fff", // Color del texto
@@ -173,6 +156,8 @@ export const globalStyles = StyleSheet.create({
     borderRadius: 20, // Si no quieres un círculo, ajusta esto a 0
     backgroundColor: "#ddd",
     margin: 10,
+    alignItems: "center",
+    justifyContent: "center",
   },
   button: {
     margin: 10,
@@ -185,7 +170,7 @@ export const globalStyles = StyleSheet.create({
     alignItems: "center", // Centra el texto horizontalmente
     justifyContent: "center", // Centra el texto verticalmente
     shadowColor: "#000", // Color de la sombra
-    shadowOffset: { width: 9, height: 10 }, // Desplazamiento de la sombra
+    shadowOffset: { width: 15, height: 15 }, // Desplazamiento de la sombra
     shadowOpacity: 8, // Opacidad de la sombra
     shadowRadius: 6, // Difuminado de la sombra
     elevation: 5, // Elevación para Android
