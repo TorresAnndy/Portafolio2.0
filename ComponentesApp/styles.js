@@ -1,29 +1,46 @@
-import { StyleSheet, Platform, Dimensions } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 
-const { height: screenHeight, width: screenWidth } = Dimensions.get("window");
-const sectionPadding = 20;
-const sectionMarginBottom = 30;
+const { width: screenWidth, height: screenHeight } = Dimensions.get("window");
 
 export const globalStyles = StyleSheet.create({
   pagina: {
     backgroundColor: "#fff",
     flex: 1,
-    paddingTop: Platform.OS === "android" ? 30 : 0,
   },
+
+  section: {
+    top: -15,
+    marginBottom: 30,
+    paddingHorizontal: 45, // Ajustado para padding horizontal
+    paddingVertical: 20, // Ajusta padding vertical si es necesario
+    borderWidth: 1,
+    borderColor: "#007bff",
+    alignItems: "center",
+    justifyContent: "center",
+    height: screenHeight, // Para que la sección ocupe toda la altura de la pantalla
+  },
+
   barra: {
     flexGrow: 1,
     padding: 20,
   },
-  imagencircular:{
-    borderRadius: 100,
+
+  imagencircular: {
+    height: 300,
+    width: 300,
+    borderRadius: 150,
   },
 
   Hola: {
-    textAlign: "center",
+    top: 7,
     fontSize: 50,
+    textAlign: "center",
     fontWeight: "bold",
     marginBottom: 5,
     color: "#000",
+    Nombre: {
+      color: 'purple',
+    },
   },
   
   titulo: {
@@ -45,15 +62,7 @@ export const globalStyles = StyleSheet.create({
     color: "#555",
     marginBottom: 21,
   },
-  section: {
-    marginBottom: sectionMarginBottom,
-    padding: sectionPadding,
-    borderWidth: 2,
-    borderColor: "#007bff",
-    borderRadius: 10,
-    textAlign: "center",
-    justifyContent: "center",
-  },
+  
   sectionContent: {
     alignItems: "center",
     textAlign: "center",
@@ -129,16 +138,16 @@ export const globalStyles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
   },
+
   menuContainer: {
-    height: screenHeight - sectionPadding - sectionMarginBottom - (Platform.OS === "android" ? 30 : 0),
     position: "absolute",
-    top: 0,
+    top: 5,
     right: 20,
     zIndex: 10,
   },
   menu: {
     position: "absolute",
-    top: 55, // Ajusta la posición según sea necesario
+    top: 39, 
     right: 30,
     padding: 10,
     borderRadius: 5,
@@ -173,6 +182,6 @@ export const globalStyles = StyleSheet.create({
     shadowOffset: { width: 15, height: 15 }, // Desplazamiento de la sombra
     shadowOpacity: 8, // Opacidad de la sombra
     shadowRadius: 6, // Difuminado de la sombra
-    elevation: 5, // Elevación para Android
+    elevation: 55, // Elevación para Android
   },
 });

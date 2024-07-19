@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { StatusBar } from "expo-status-bar";
+import {StatusBar } from "expo-status-bar";
 import {
   Text,
   View,
@@ -87,7 +87,11 @@ export default function App() {
               source={require("../assets/images/perfil.png")}
               style={globalStyles.imagencircular}
             />
-            <Text style={globalStyles.Hola}>Hola, mi Nombre es Andy</Text>
+            <Text style={globalStyles.Hola}>¡Hola!,</Text>
+            <Text style={globalStyles.Hola}>
+              Me Llamo,{" "}
+              <Text style={globalStyles.Hola.Nombre}>Andy Gonzales</Text>
+            </Text>
             <Text style={globalStyles.Junior}>Junior Developer</Text>
           </View>
 
