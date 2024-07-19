@@ -1,17 +1,27 @@
-// App.js
-import React, { useState, useEffect, useRef } from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { Text, View, Image, Animated, ScrollView, TouchableOpacity } from 'react-native';
-import { globalStyles } from '../ComponentesApp/styles';
-import Aprendizaje from '../ComponentesApp/aprendizaje';
-import Proyectos from '../ComponentesApp/Proyectos';
-import Contacto from '../ComponentesApp/Contacto';
-import Menu from '../ComponentesApp/menu';
-import { Navegar } from '../ComponentesApp/Deslizar';
-import LinearGradient from 'react-native-linear-gradient';
+import React, { useState, useEffect, useRef } from "react";
+import { StatusBar } from "expo-status-bar";
+import {
+  Text,
+  View,
+  Image,
+  Animated,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native";
+import { globalStyles } from "../ComponentesApp/styles";
+import Aprendizaje from "../ComponentesApp/Aprendizaje";
+import Proyectos from "../ComponentesApp/Proyectos";
+import Contacto from "../ComponentesApp/Contacto";
+import Menu from "../ComponentesApp/menu";
+import { Navegar } from "../ComponentesApp/Deslizar";
 
-
-type Section = 'Inicio' | 'SobreMi' | 'Aspiraciones' | 'Proyectos' | 'Aprendizaje' | 'Contacto';
+type Section =
+  | "Inicio"
+  | "SobreMi"
+  | "Aspiraciones"
+  | "Proyectos"
+  | "Aprendizaje"
+  | "Contacto";
 
 export default function App() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -35,7 +45,7 @@ export default function App() {
   // Función para mostrar/ocultar el menú con efecto de desvanecimiento
   const toggleMenu = () => {
     const toValue = menuVisible ? 0 : 1;
-    
+
     Animated.timing(menuAnim, {
       toValue,
       duration: 300,
@@ -52,15 +62,11 @@ export default function App() {
 
   return (
     <View style={globalStyles.pagina}>
-      <LinearGradient
-        colors={['#6a0dad', '#9b4f9d']} // Colores del degradado
-        style={globalStyles.gradientBackground}
-      ></LinearGradient>
       <View style={globalStyles.menuContainer}>
         <TouchableOpacity onPress={toggleMenu}>
           <Image
             style={globalStyles.menuButton}
-            source={require('../assets/images/casa.png')} // Botón de menú
+            source={require("../assets/images/casa.png")} // Botón de menú
           />
         </TouchableOpacity>
         <Animated.View style={[globalStyles.menu, { opacity: menuAnim }]}>
@@ -73,51 +79,53 @@ export default function App() {
         contentContainerStyle={globalStyles.barra}
       >
         <StatusBar style="dark" />
-        
+
         <Animated.View style={{ opacity: fadeAnim }}>
           {/* Header */}
           <View style={globalStyles.section}>
             <Image
-              source={require('../assets/images/perfil.png')}
+              source={require("../assets/images/perfil.png")}
               style={globalStyles.imagencircular}
             />
             <Text style={globalStyles.Hola}>Hola, mi Nombre es Andy</Text>
             <Text style={globalStyles.Junior}>Junior Developer</Text>
           </View>
-          
+
           {/* Sobre mí */}
           <View style={globalStyles.section}>
             <Text style={globalStyles.titulo}>Sobre mí</Text>
             <Text style={globalStyles.sectionContent}>
-              Tengo 21 años, sigo una carrera de Ingeniería en Tecnologías de la Información
+              Tengo 21 años, sigo una carrera de Ingeniería en Tecnologías de la
+              Información
             </Text>
           </View>
-          
+
           {/* Áreas de Aspiraciones */}
           <View style={globalStyles.section}>
             <Text style={globalStyles.titulo}>Áreas de Aspiraciones</Text>
             <View style={globalStyles.project}>
               <Image
-                source={require('../assets/images/Progra.png')}
+                source={require("../assets/images/Progra.png")}
                 style={globalStyles.projectImage}
               />
               <View style={globalStyles.projectInfo}>
                 <Text style={globalStyles.projectDescription}>- Backend</Text>
-                <Text style={globalStyles.projectDescription}>- Ciberseguridad</Text>
+                <Text style={globalStyles.projectDescription}>
+                  - Ciberseguridad
+                </Text>
               </View>
             </View>
           </View>
-          
+
           {/* Proyectos */}
           <Proyectos />
-          
+
           {/* Componente Aprendizaje */}
           <Aprendizaje />
-          
+
           {/* Contacto */}
           <Contacto />
         </Animated.View>
-        
       </ScrollView>
     </View>
   );

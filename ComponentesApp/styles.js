@@ -11,10 +11,6 @@ export const globalStyles = StyleSheet.create({
     flex: 1,
     paddingTop: Platform.OS === 'android' ? 30 : 0,
   },
-  gradientBackground: {
-    flex: 1,
-    // Para asegurarte de que el degradado cubra toda la pantalla
-  },
   barra: {
     flexGrow: 1,
     padding: 20,
