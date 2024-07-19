@@ -6,13 +6,13 @@ export const Navegar = (scrollViewRef, section) => {
       scrollViewRef.current.scrollTo({y: 0, animated: true});
       break;
     case 'SobreMi':
-      scrollViewRef.current.scrollTo({ y: 350, animated: true });
+      scrollViewRef.current.scrollTo({ y: 640, animated: true });
       break;
     case 'Aspiraciones':
-      scrollViewRef.current.scrollTo({ y: 1000, animated: true });
+      scrollViewRef.current.scrollTo({ y: 3, animated: true });
       break;
     case 'Proyectos':
-      scrollViewRef.current.scrollTo({ y: 1640, animated: true });
+      scrollViewRef.current.scrollTo({ y: 2000, animated: true });
       break;
     case 'Aprendizaje':
       scrollViewRef.current.scrollTo({ y: 3050, animated: true });
