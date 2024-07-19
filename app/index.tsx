@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { globalStyles } from "../ComponentesApp/styles";
-import Aprendizaje from "../ComponentesApp/Aprendizaje";
+import Aprendizaje from "../ComponentesApp/aprendizaje";
 import Proyectos from "../ComponentesApp/Proyectos";
 import Contacto from "../ComponentesApp/Contacto";
 import Menu from "../ComponentesApp/menu";
