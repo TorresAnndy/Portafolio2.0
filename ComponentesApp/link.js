@@ -77,3 +77,8 @@ export const C =() =>{
 export const CC =() =>{
   Linking.openURL('https://learn.microsoft.com/es-es/dotnet/csharp/')
 }
+
+export const CertificadoGityGitHub =() =>{
+  Linking.openURL('https://todocodeacademy.com/certificate/8al/')
+}
+

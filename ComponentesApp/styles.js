@@ -15,6 +15,8 @@ export const globalStyles = StyleSheet.create({
     paddingVertical: 20, // Ajusta padding vertical si es necesario
     alignItems: "center",
     justifyContent: "center",
+    borderWidth: 2,
+    borderColor: "#000",
     height: screenHeight, // Para que la sección ocupe toda la altura de la pantalla
   },
 
@@ -93,6 +95,13 @@ export const globalStyles = StyleSheet.create({
     borderRadius: 10,
     marginRight: 10,
   },
+  certificados:{
+    width: 70,
+    height: 70,
+    borderRadius: 10,
+    marginRight: 10,
+  },
+
   lenguajes: {
     width: 50,
     height: 50,

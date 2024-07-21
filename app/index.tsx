@@ -14,6 +14,7 @@ import Proyectos from "../ComponentesApp/Proyectos";
 import Contacto from "../ComponentesApp/Contacto";
 import Menu from "../ComponentesApp/menu";
 import { Navegar } from "../ComponentesApp/Deslizar";
+import Certificados from "../ComponentesApp/Certificados";
 
 type Section =
   | "Inicio"
@@ -121,11 +122,15 @@ export default function App() {
             </View>
           </View>
 
+          {/* Componente Aprendizaje */}
+          <Aprendizaje />
+
           {/* Proyectos */}
           <Proyectos />
 
-          {/* Componente Aprendizaje */}
-          <Aprendizaje />
+          {/* Certificados */}
+          <Text style={globalStyles.titulo}>Certificados</Text>
+          <Certificados/>
 
           {/* Contacto */}
           <Contacto />
