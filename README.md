@@ -1,17 +1,18 @@
 # Bienvenido a mi Aplicacion 👋
 
-## Cosas que arreglar
+## Cosas Necesarias para Iniciar el Proyecto
+
+1. Instalar
+   ```bash
+   npm install
+
+   npm start
+   ```
 
 1. Web
 
    ```bash
-   - Mejorar el diseño de presentacion
-   - Aumentar los proyectos
+   - Crear un contenedo dentro de otro para proyectos
    - Eliminar los bordes
    ```
 
-2. Android
-
-   ```bash
-    - Corregir error de botones
-   ```
