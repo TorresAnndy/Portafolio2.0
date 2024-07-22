@@ -9,7 +9,7 @@ export const Navegar = (scrollViewRef, section) => {
       scrollViewRef.current.scrollTo({ y: 745, animated: true });
       break;
     case 'Aspiraciones':
-      scrollViewRef.current.scrollTo({ y: 1470, animated: true });
+      scrollViewRef.current.scrollTo({ y: 1475, animated: true });
       break;
     case 'Proyectos':
       scrollViewRef.current.scrollTo({ y: 2210, animated: true });
