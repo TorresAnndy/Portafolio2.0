@@ -21,7 +21,7 @@ export const Navegar = (scrollViewRef, section) => {
       scrollViewRef.current.scrollTo({ y: 4460, animated: true });
       break;
     case 'Contacto':
-      scrollViewRef.current.scrollTo({ y: 5289, animated: true });
+      scrollViewRef.current.scrollTo({ y: 5295, animated: true });
       break;
     default:
       break;
