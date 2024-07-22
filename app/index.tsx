@@ -83,6 +83,7 @@ export default function App() {
 
         <Animated.View style={{ opacity: fadeAnim }}>
           {/* Header */}
+          
           <View style={globalStyles.section}>
             <Image
               source={require("../assets/images/perfil.png")}
@@ -93,7 +94,7 @@ export default function App() {
               Me Llamo,{" "}
               <Text style={globalStyles.Hola.Nombre}>Andy Gonzales</Text>
             </Text>
-            <Text style={globalStyles.Junior}>Junior Developer</Text>
+            <Text style={globalStyles.Junior}>---Junior Developer---</Text>
           </View>
 
           {/* Sobre mí */}
@@ -101,7 +102,8 @@ export default function App() {
             <Text style={globalStyles.titulo}>Sobre mí</Text>
             <Text style={globalStyles.sectionContent}>
               Tengo 21 años, sigo una carrera de Ingeniería en Tecnologías de la
-              Información
+              Información, actualmente me encuentro trabajando en el departamento de desarrollo,
+              mi aspiracion es trabajar en el area de ciberseguridad
             </Text>
           </View>
 
@@ -114,19 +116,17 @@ export default function App() {
                 style={globalStyles.projectImage}
               />
               <View style={globalStyles.projectInfo}>
+                <Text style={globalStyles.projectDescription}>- Ciberseguridad</Text>
                 <Text style={globalStyles.projectDescription}>- Backend</Text>
-                <Text style={globalStyles.projectDescription}>
-                  - Ciberseguridad
-                </Text>
               </View>
             </View>
           </View>
 
-          {/* Componente Aprendizaje */}
-          <Aprendizaje />
-
           {/* Proyectos */}
           <Proyectos />
+
+          {/* Componente Aprendizaje */}
+          <Aprendizaje />
 
           {/* Certificados */}
           <Text style={globalStyles.titulo}>Certificados</Text>

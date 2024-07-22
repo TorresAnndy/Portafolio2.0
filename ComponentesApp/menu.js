@@ -21,6 +21,9 @@ const Menu = ({ handleNavigation }) => {
       <TouchableOpacity style={globalStyles.button} onPress={() => handleNavigation('Aprendizaje')}>
         <Text style={globalStyles.buttonText}>Aprendizaje</Text>
       </TouchableOpacity>
+      <TouchableOpacity style={globalStyles.button} onPress={() => handleNavigation('Certificado')}>
+        <Text style={globalStyles.buttonText}>Certificado</Text>
+      </TouchableOpacity>
       <TouchableOpacity style={globalStyles.button} onPress={() => handleNavigation('Contacto')}>
         <Text style={globalStyles.buttonText}>Contacto</Text>
       </TouchableOpacity>

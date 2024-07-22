@@ -4,7 +4,7 @@ const { width: screenWidth, height: screenHeight } = Dimensions.get("window");
 
 export const globalStyles = StyleSheet.create({
   pagina: {
-    backgroundColor: "#fff",
+    backgroundColor: "#CECECE",
     flex: 1,
   },
 
@@ -15,8 +15,9 @@ export const globalStyles = StyleSheet.create({
     paddingVertical: 20, // Ajusta padding vertical si es necesario
     alignItems: "center",
     justifyContent: "center",
-    borderWidth: 2,
-    borderColor: "#000",
+    borderWidth: 1,
+    borderColor: "#B2B2B2",
+    backgroundColor: "#E5E5E5",
     height: screenHeight, // Para que la sección ocupe toda la altura de la pantalla
   },
 
@@ -38,6 +39,8 @@ export const globalStyles = StyleSheet.create({
     height: 300,
     width: 300,
     borderRadius: 150,
+    borderWidth: 5,
+    borderColor: "#B2B2B2",
   },
 
   Hola: {
@@ -48,7 +51,7 @@ export const globalStyles = StyleSheet.create({
     marginBottom: 5,
     color: "#000",
     Nombre: {
-      color: 'purple',
+      color: 'blue',
     },
   },
   
