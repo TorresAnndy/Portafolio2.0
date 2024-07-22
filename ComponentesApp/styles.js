@@ -4,7 +4,7 @@ const { width: screenWidth, height: screenHeight } = Dimensions.get("window");
 
 export const globalStyles = StyleSheet.create({
   pagina: {
-    backgroundColor: "#CECECE",
+    backgroundColor: "#CBD7F8",
     flex: 1,
   },
 
@@ -40,7 +40,7 @@ export const globalStyles = StyleSheet.create({
     width: 300,
     borderRadius: 150,
     borderWidth: 5,
-    borderColor: "#B2B2B2",
+    borderColor: "#A0B9FB",
   },
 
   Hola: {
