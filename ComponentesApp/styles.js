@@ -208,6 +208,7 @@ export const globalStyles = StyleSheet.create({
   },
 
   menuButton: {
+    left: isLargeScreen ? 0: 30,
     width: isLargeScreen ? 100 : 50,
     height: isLargeScreen ? 100 : 50,
     margin: 30,
