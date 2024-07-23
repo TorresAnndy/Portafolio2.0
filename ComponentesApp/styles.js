@@ -36,16 +36,17 @@ export const globalStyles = StyleSheet.create({
   },
 
   imagencircular: {
-    height: 300,
-    width: 300,
-    borderRadius: 150,
+    top: -100,
+    height: 800,
+    width: 800,
+    borderRadius: 400,
     borderWidth: 5,
     borderColor: "#A0B9FB",
   },
 
   Hola: {
-    top: 7,
-    fontSize: 50,
+    top: -100,
+    fontSize: 100,
     textAlign: "center",
     fontWeight: "bold",
     marginBottom: 5,
@@ -53,45 +54,51 @@ export const globalStyles = StyleSheet.create({
     Nombre: {
       color: 'blue',
     },
+    Junior: {
+      top: -100,
+      fontSize: 50,
+      color: "#555",
+      marginBottom: 21,
+      justifyContent: "center",
+      textAlign: "center",
+    },
   },
+
   
-  titulo: {
+  
+  titulos: {
     textAlign: "center",
-    fontSize: 20,
+    fontSize: 50,
     fontWeight: "bold",
     marginBottom: 50,
     color: "#000",
+    
   },
-  Junior: {
-    fontSize: 30,
-    color: "#555",
-    marginBottom: 21,
-    justifyContent: "center",
+
+  sobremicontenido: {
+    alignItems: "center",
     textAlign: "center",
+    fontSize: 30,
+    color: "#000",
   },
+  
   subtitulos: {
     fontSize: 20,
     color: "#555",
     marginBottom: 21,
   },
   
-  sectionContent: {
-    alignItems: "center",
-    textAlign: "center",
-    fontSize: 16,
-    lineHeight: 22,
-    color: "#000",
-  },
+  
+
   project: {
     flexDirection: "row",
     marginBottom: 20,
   },
   projectImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 10,
-    marginRight: 10,
+    width: 300,
+    height: 300,
   },
+
   projectImgcont: {
     width: 50,
     height: 50,
@@ -117,29 +124,36 @@ export const globalStyles = StyleSheet.create({
     borderRadius: 10,
     marginRight: 10,
   },
+
   botonesgithub: {
-    backgroundColor: "#375ECE",
-    marginBottom: 5,
-    padding: 10,
-    borderWidth: 2,
+    fontSize: 30,
+    backgroundColor: "#D5D5D5",
+    marginBottom: 20, // Margen inferior ajustado
+    paddingVertical: 30, // Ajuste vertical
+    paddingHorizontal: 50, // Ajuste horizontal
+    borderWidth: 1,
     borderColor: "#000",
-    borderRadius: 10,
+    borderRadius: 10, // Ajuste de borde
     alignSelf: "center",
   },
+
   projectImgbdd: {
     width: 85,
     height: 100,
     borderRadius: 10,
     marginRight: 10,
   },
+
   projectInfo: {
     flex: 1,
   },
+
   projectDescription: {
-    fontSize: 14,
+    fontSize: 35,
     marginBottom: 5,
     color: "#000",
   },
+
   contactLinks: {
     flexDirection: "row",
     justifyContent: "center",

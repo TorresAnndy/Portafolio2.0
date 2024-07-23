@@ -6,9 +6,9 @@ import * as link from './link'; // Asegúrate de importar las funciones necesari
 const Proyectos = () => {
   return (
     <View>
-      <Text style={globalStyles.titulo}>Proyectos</Text>
+      <Text style={globalStyles.titulos}>Proyectos</Text>
       <View style={globalStyles.section}>
-        <Text style={globalStyles.titulo}>CEOYDESK</Text>
+        <Text style={globalStyles.titulos}>CEOYDESK</Text>
         <View style={globalStyles.project}>
           <TouchableOpacity onPress={link.handleProyectoCeoyDeskPress}>
             <Image
@@ -17,7 +17,7 @@ const Proyectos = () => {
             />
           </TouchableOpacity>
           <View style={globalStyles.projectInfo}>
-            <Text style={globalStyles.sectionContent}>
+            <Text style={globalStyles.projectDescription}>
               Sistema de seguridad a nivel empresarial, el cual contiene sistema de seguridad de ingreso, registro vehicular, de la persona, tiempo que ingresa al plantel, sistema de vigilancia 24/7, vigilancia aérea con drones
             </Text>
           </View>
