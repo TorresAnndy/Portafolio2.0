@@ -100,27 +100,35 @@ export const globalStyles = StyleSheet.create({
   },
 
   projectImgcont: {
-    width: 50,
-    height: 50,
+    width: 150,
+    height: 200,
     borderRadius: 10,
     marginRight: 10,
   },
+
+  imagencontacto: {
+    width: 100,
+    height: 100,
+    borderRadius: 10,
+    marginRight: 10,
+  },
+
   certificados:{
-    width: 70,
-    height: 70,
+    width: 200,
+    height: 200,
     borderRadius: 10,
     marginRight: 10,
   },
 
   lenguajes: {
-    width: 50,
-    height: 50,
+    width: 200,
+    height: 200,
     borderRadius: 10,
     marginRight: 10,
   },
   lenguajescisco: {
-    width: 65,
-    height: 50,
+    width: 198,
+    height: 150,
     borderRadius: 10,
     marginRight: 10,
   },
@@ -138,8 +146,9 @@ export const globalStyles = StyleSheet.create({
   },
 
   projectImgbdd: {
-    width: 85,
-    height: 100,
+    top: -100,
+    width: 300,
+    height: 340,
     borderRadius: 10,
     marginRight: 10,
   },
@@ -180,8 +189,8 @@ export const globalStyles = StyleSheet.create({
   },
   menu: {
     position: "absolute",
-    top: 39, 
-    right: 30,
+    top: 100, 
+    right: 100,
     padding: 10,
     borderRadius: 5,
     zIndex: 10,
@@ -189,15 +198,13 @@ export const globalStyles = StyleSheet.create({
   },
   buttonText: {
     color: "#fff", // Color del texto
-    fontSize: 16, // Tamaño del texto
+    fontSize: 40, // Tamaño del texto
     fontWeight: "bold", // Negrita
   },
   menuButton: {
-    width: 40, // Ajusta el tamaño según sea necesario
-    height: 40,
-    borderRadius: 20, // Si no quieres un círculo, ajusta esto a 0
-    backgroundColor: "#ddd",
-    margin: 10,
+    width: 100, // Ajusta el tamaño según sea necesario
+    height: 100,    
+    margin: 30,
     alignItems: "center",
     justifyContent: "center",
   },

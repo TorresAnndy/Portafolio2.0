@@ -28,7 +28,7 @@ const Proyectos = () => {
       </View>
 
       <View style={globalStyles.section}>
-        <Text style={globalStyles.titulo}>Acceso a Datos</Text>
+        <Text style={globalStyles.titulos}>Acceso a Datos</Text>
         <View style={globalStyles.project}>
           <TouchableOpacity onPress={link.handleProyectoPress}>
             <Image
@@ -37,7 +37,7 @@ const Proyectos = () => {
             />
           </TouchableOpacity>
           <View style={globalStyles.projectInfo}>
-            <Text style={globalStyles.sectionContent}>
+            <Text style={globalStyles.projectDescription}>
               El proyecto permite ingresar, revisar y borrar datos de estudiantes de una universidad almacenando en una base de datos
             </Text>
           </View>
