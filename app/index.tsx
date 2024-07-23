@@ -123,7 +123,6 @@ export default function App() {
 
           {/* Contacto */}
           <Contacto />
-          
         </Animated.View>
       </ScrollView>
     </View>
