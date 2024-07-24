@@ -15,7 +15,6 @@ import Contacto from "../ComponentesApp/Contacto";
 import Menu from "../ComponentesApp/menu";
 import { Navegar } from "../ComponentesApp/Deslizar";
 import Certificados from "../ComponentesApp/Certificados";
-import Presentacion from "../ComponentesApp/presentacion";
 
 type Section =
   | "Inicio"
@@ -68,7 +67,7 @@ export default function App() {
         <TouchableOpacity onPress={toggleMenu}>
           <Image
             style={globalStyles.menuButton}
-            source={require("../assets/images/casa.png")}
+            source={require("../assets/images/casa.png")} // Botón de menú
           />
         </TouchableOpacity>
         <Animated.View style={[globalStyles.menu, { opacity: menuAnim }]}>
@@ -83,13 +82,25 @@ export default function App() {
         <StatusBar style="dark" />
 
         <Animated.View style={{ opacity: fadeAnim }}>
+          {/* Header */}
           
-          <Presentacion/>
+          <View style={globalStyles.section}>
+            <Image
+              source={require("../assets/images/perfil.png")}
+              style={globalStyles.imagencircular}
+            />
+            <Text style={globalStyles.Hola}>¡Hola!,</Text>
+            <Text style={globalStyles.Hola}>
+              Me Llamo,{" "}
+              <Text style={globalStyles.Hola.Nombre}>Andy Gonzales</Text>
+            </Text>
+            <Text style={globalStyles.Junior}>---Junior Developer---</Text>
+          </View>
 
           {/* Sobre mí */}
           <View style={globalStyles.section}>
-            <Text style={globalStyles.titulos}>Sobre mí</Text>
-            <Text style={globalStyles.sobremicontenido}>
+            <Text style={globalStyles.titulo}>Sobre mí</Text>
+            <Text style={globalStyles.sectionContent}>
               Tengo 21 años, sigo una carrera de Ingeniería en Tecnologías de la
               Información, actualmente me encuentro trabajando en el departamento de desarrollo,
               mi aspiracion es trabajar en el area de ciberseguridad
@@ -98,13 +109,13 @@ export default function App() {
 
           {/* Áreas de Aspiraciones */}
           <View style={globalStyles.section}>
-            <Text style={globalStyles.titulos}>Áreas de Aspiraciones</Text>
-            <View >
+            <Text style={globalStyles.titulo}>Áreas de Aspiraciones</Text>
+            <View style={globalStyles.project}>
               <Image
                 source={require("../assets/images/Progra.png")}
                 style={globalStyles.projectImage}
               />
-              <View>
+              <View style={globalStyles.projectInfo}>
                 <Text style={globalStyles.projectDescription}>- Ciberseguridad</Text>
                 <Text style={globalStyles.projectDescription}>- Backend</Text>
               </View>
@@ -118,7 +129,7 @@ export default function App() {
           <Aprendizaje />
 
           {/* Certificados */}
-          <Text style={globalStyles.titulos}>Certificados</Text>
+          <Text style={globalStyles.titulo}>Certificados</Text>
           <Certificados/>
 
           {/* Contacto */}

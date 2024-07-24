@@ -7,7 +7,7 @@ import { C, CC, CiscoDocumentacion, DockerDocumentacion, Documentacion, EclipseI
 const Aprendizaje = () => {
   return (
     <View style={globalStyles.section}>
-      <Text style={globalStyles.titulos}>Aprendizaje</Text>
+      <Text style={globalStyles.titulo}>Aprendizaje</Text>
       
       <View style={globalStyles.contactLinks}>
         <TouchableOpacity onPress={C}>

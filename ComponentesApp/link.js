@@ -81,4 +81,3 @@ export const CC =() =>{
 export const CertificadoGityGitHub =() =>{
   Linking.openURL('https://todocodeacademy.com/certificate/8al/')
 }
-

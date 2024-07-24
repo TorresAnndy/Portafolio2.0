@@ -6,9 +6,9 @@ import * as link from './link'; // Asegúrate de importar las funciones necesari
 const Proyectos = () => {
   return (
     <View>
-      <Text style={globalStyles.titulos}>Proyectos</Text>
+      <Text style={globalStyles.titulo}>Proyectos</Text>
       <View style={globalStyles.section}>
-        <Text style={globalStyles.titulos}>CEOYDESK</Text>
+        <Text style={globalStyles.titulo}>CEOYDESK</Text>
         <View style={globalStyles.project}>
           <TouchableOpacity onPress={link.handleProyectoCeoyDeskPress}>
             <Image
@@ -17,7 +17,7 @@ const Proyectos = () => {
             />
           </TouchableOpacity>
           <View style={globalStyles.projectInfo}>
-            <Text style={globalStyles.projectDescription}>
+            <Text style={globalStyles.sectionContent}>
               Sistema de seguridad a nivel empresarial, el cual contiene sistema de seguridad de ingreso, registro vehicular, de la persona, tiempo que ingresa al plantel, sistema de vigilancia 24/7, vigilancia aérea con drones
             </Text>
           </View>
@@ -28,7 +28,7 @@ const Proyectos = () => {
       </View>
 
       <View style={globalStyles.section}>
-        <Text style={globalStyles.titulos}>Acceso a Datos</Text>
+        <Text style={globalStyles.titulo}>Acceso a Datos</Text>
         <View style={globalStyles.project}>
           <TouchableOpacity onPress={link.handleProyectoPress}>
             <Image
@@ -37,7 +37,7 @@ const Proyectos = () => {
             />
           </TouchableOpacity>
           <View style={globalStyles.projectInfo}>
-            <Text style={globalStyles.projectDescription}>
+            <Text style={globalStyles.sectionContent}>
               El proyecto permite ingresar, revisar y borrar datos de estudiantes de una universidad almacenando en una base de datos
             </Text>
           </View>
