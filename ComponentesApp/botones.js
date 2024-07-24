@@ -1,17 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-export const globalStyles = StyleSheet.create({
-  section: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
-  },
-  titulo: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20,
-  },
+export const botonstyle = StyleSheet.create({
   contactLinks: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -25,67 +14,42 @@ export const globalStyles = StyleSheet.create({
     position: 'absolute',
     top: -30,
     left: '50%',
-    transform: [{ translateX: -50 }],
+    marginLeft: -30, // 50% translated to pixels
     color: '#fff',
-    paddingVertical: 6,
-    paddingHorizontal: 10,
+    padding: 6,
     borderRadius: 5,
     opacity: 0,
-    visibility: 'hidden',
     fontSize: 14,
-    transition: 'all 0.3s ease',
+    zIndex: 1,
   },
-  iconContentHover: {
-    opacity: 1,
-    visibility: 'visible',
-    top: -50,
-  },
-  linkButton: {
+  iconLink: {
     position: 'relative',
     overflow: 'hidden',
     justifyContent: 'center',
     alignItems: 'center',
     width: 50,
     height: 50,
-    borderRadius: 50,
+    borderRadius: 25, // for a circular shape
     backgroundColor: '#fff',
-    transition: 'all 0.3s ease-in-out',
   },
-  linkButtonHover: {
-    shadowColor: 'rgba(0, 0, 0, 0.12)',
-    shadowOffset: { width: 3, height: 2 },
-    shadowOpacity: 0.45,
-    shadowRadius: 45,
-  },
-  linkButtonFilled: {
+  filled: {
     position: 'absolute',
-    top: 'auto',
     bottom: 0,
     left: 0,
     width: '100%',
     height: 0,
     backgroundColor: '#000',
-    transition: 'all 0.3s ease-in-out',
   },
-  linkButtonFilledHover: {
-    height: '100%',
-  },
-  linkButtonText: {
-    position: 'relative',
-    zIndex: 1,
-    width: 30,
-    height: 30,
-  },
-  linkedinFilled: {
+  linkedin: {
     backgroundColor: '#0274b3',
   },
-  githubFilled: {
+  github: {
     backgroundColor: '#24262a',
   },
-  instagramFilled: {
-    backgroundColor: 'linear-gradient(45deg, #405de6, #5b51db, #b33ab4, #c135b4, #e1306c, #fd1f1f)',
+  instagram: {
+    backgroundColor: 'transparent',
   },
-  youtubeFilled: {
+  youtube: {
     backgroundColor: '#ff0000',
   },
 });
