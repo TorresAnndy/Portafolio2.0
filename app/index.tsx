@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import {StatusBar } from "expo-status-bar";
+import { StatusBar } from "expo-status-bar";
 import {
   Text,
   View,
@@ -83,29 +83,31 @@ export default function App() {
         <StatusBar style="dark" />
 
         <Animated.View style={{ opacity: fadeAnim }}>
-          
-          <Presentacion/>
+          <Presentacion />
 
           {/* Sobre mí */}
           <View style={globalStyles.section}>
             <Text style={globalStyles.titulos}>Sobre mí</Text>
             <Text style={globalStyles.sobremicontenido}>
               Tengo 21 años, sigo una carrera de Ingeniería en Tecnologías de la
-              Información, actualmente me encuentro trabajando en el departamento de desarrollo,
-              mi aspiracion es trabajar en el area de ciberseguridad
+              Información, actualmente me encuentro trabajando en el
+              departamento de desarrollo, mi aspiracion es trabajar en el area
+              de ciberseguridad
             </Text>
           </View>
 
           {/* Áreas de Aspiraciones */}
           <View style={globalStyles.section}>
             <Text style={globalStyles.titulos}>Áreas de Aspiraciones</Text>
-            <View >
+            <View>
               <Image
                 source={require("../assets/images/Progra.png")}
                 style={globalStyles.projectImage}
               />
               <View>
-                <Text style={globalStyles.projectDescription}>- Ciberseguridad</Text>
+                <Text style={globalStyles.projectDescription}>
+                  - Ciberseguridad
+                </Text>
                 <Text style={globalStyles.projectDescription}>- Backend</Text>
               </View>
             </View>
@@ -119,7 +121,7 @@ export default function App() {
 
           {/* Certificados */}
           <Text style={globalStyles.titulos}>Certificados</Text>
-          <Certificados/>
+          <Certificados />
 
           {/* Contacto */}
           <Contacto />
